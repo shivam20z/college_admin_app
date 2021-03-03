@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "691867355776",
+    "project_id": "givni-delivery-users",
+    "storage_bucket": "givni-delivery-users.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691867355776:android:ab4541e23f30d4f5b3f465",
+        "android_client_info": {
+          "package_name": "com.bipuldevashish.givnidelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691867355776-qodc7fr96s1i0paabrnnpp3rjf42i65h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bipuldevashish.givnidelivery",
+            "certificate_hash": "0978abeda14d2567d3343113764e5ad3a3565390"
+          }
+        },
+        {
+          "client_id": "691867355776-45mn2uqgb2qn16d8n47f7kur73b37007.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAJzGON_SXDXLzoXLO_gcPy7yfA6fGEzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691867355776-45mn2uqgb2qn16d8n47f7kur73b37007.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

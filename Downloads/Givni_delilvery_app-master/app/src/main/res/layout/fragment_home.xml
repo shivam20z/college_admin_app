@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context=".ui.home.HomeFragment">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/Collaps_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+        <RelativeLayout
+            android:id="@+id/relLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <fragment
+                android:id="@+id/map"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="400dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/white_border"
+            android:elevation="10dp">
+
+            <ImageView
+                android:id="@+id/ic_magnify"
+                android:layout_width="15dp"
+                android:layout_height="15sp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_baseline_search_24" />
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ic_magnify"
+                android:background="@null"
+                android:hint="Enter City, Address or Zip code"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/gps"
+            android:layout_width="32sp"
+            android:layout_height="32sp"
+            android:layout_below="@id/relLayout1"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/gps" />
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layout_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:id="@+id/nest1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="16sp"
+                android:src="@drawable/pickup_map"/>
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="16sp"
+                android:text="Add Pickup Details"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/black"
+                android:layout_below="@id/image"/>
+
+
+            <TextView
+                android:id="@+id/mapAddress"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_margin="16sp"
+                android:layout_below="@id/text1"
+                android:background="@drawable/white_border"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/et_getName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16sp"
+                    android:layout_below="@id/mapAddress"
+                    android:hint=" Name"
+                    android:drawableEnd="@drawable/ic_contact"
+                    android:drawableStart="@drawable/ic_name"/>
+
+            <EditText
+                android:id="@+id/et_getPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16sp"
+                android:layout_below="@id/et_getName"
+                android:hint=" Phone Number"
+                android:drawableStart="@drawable/ic_phone"/>
+
+            <EditText
+                android:id="@+id/et_getFlatName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16sp"
+                android:layout_below="@id/et_getPhoneNumber"
+                android:hint=" FLat / Door No"
+                android:drawableStart="@drawable/ic_flat"/>
+
+            <EditText
+                android:id="@+id/et_getLandMark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16sp"
+                android:layout_below="@id/et_getFlatName"
+                android:hint=" Landmark"
+                android:drawableStart="@drawable/ic_landmark"/>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/et_getLandMark"
+                android:layout_margin="16sp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Tag as"/>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/white_border"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="Home"/>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/white_border"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="Work"/>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/white_border"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="Others"/>
+
+            </LinearLayout>
+
+
+
+            <EditText
+                android:id="@+id/otherAddress"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16sp"
+                android:layout_below="@id/linearLayout4"
+                android:hint=" Provide name for the address"
+                android:drawableStart="@drawable/ic_flat"/>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
